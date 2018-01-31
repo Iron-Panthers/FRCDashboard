@@ -22,6 +22,7 @@ onkeydown = key => {
 function onRobotConnection(connected) {
     var state = connected ? 'Robot connected!' : 'Robot disconnected.';
     console.log(state);
+    console.log(NetworkTables.getRobotAddress());
     ui.robotState.textContent = state;
     if (connected) {
         // On connect hide the connect popup
@@ -38,7 +39,7 @@ function onRobotConnection(connected) {
         address.disabled = connect.disabled = false;
         connect.textContent = 'Connect';
         // Add the default address and select xxxx
-        address.value = 'roborio-5026.local';
+        address.value = 'roborio-5026-FRC.local';
         address.focus();
         address.setSelectionRange(8, 12);
         // On click try to connect and disable the input and the button
