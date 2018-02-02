@@ -1,0 +1,20 @@
+Starting SmarterDashboard
+
+==Pre-Req==
+Open FRCDashboard repo to ensure that all files are present (main.js, ui.js, connections.js, index.html, pynetworktables2js.exe, components, css, networktables)
+
+==Steps==
+1. Open DriverStation and Eclipse and build code.
+
+==Opening the Outline viewer==
+2. After building, open the Outline viewer located on top on the toolbar next to create a new java class
+3. Be sure to slide the 'Server Mode' to the left, and put "roborio-5026-frc.local" inside the Server Location box
+4. Ensure that the "Default Port" slide is to the right, and that the server port cannot be edited. If trouble exists on this step, slide the 'Default Port' switch to the left and set the "Sever Port" to "1735," then slide the 'Default Port' back to the right
+5. Once completed, press "Start" to run the Outline Viewer
+
+==Openning up SmarterDashboard
+6. After building, open up the terminal/command prompt to locate the directory of your "FRCDashboard\src" file. On Stenson, this is located at "C:\Users\ibm\FRCDashboard\src"
+7. Once the directory path has been located, use "npm start" to launch SmarterDashboard.
+8. When launching SmarterDashboard, a prompt should appear asking to connect. Double check to make sure SmarterDashboard is connecting to "roborio-5026-FRC.local" before clicking "Connect."
+
+9. Robits should meow b connect

@@ -64,7 +64,7 @@ NetworkTables.addKeyListener('/robot/time', (key, value) => {
 });
 
 // Load list of prewritten autonomous modes
-NetworkTables.addKeyListener('/SmartDashboard/Auto mode/selected', (key, value) => {
+NetworkTables.addKeyListener('/SmartDashboard/Auto mode/options', (key, value) => { //'/SmartDashboard/autonomous/modes' //'/SmartDashboard/Auto Mode/selected' prints out each char of the Auto Mode
     // Clear previous list
     while (ui.autoSelect.firstChild) {
         ui.autoSelect.removeChild(ui.autoSelect.firstChild);
@@ -72,7 +72,8 @@ NetworkTables.addKeyListener('/SmartDashboard/Auto mode/selected', (key, value) 
     // Make an option for each autonomous mode and put it in the selector
     for (let i = 0; i < value.length; i++) {
         var option = document.createElement('option');
-        option.appendChild(document.createTextNode(value[i]));
+        option.appendChild(document.createTextNode(value[i])); //PLEASE CHANGE MY COLOR MY DDODD
+        //option.children[i].innerHTML =
         ui.autoSelect.appendChild(option);
     }
     // Set value to the already-selected mode. If there is none, nothing will happen.
@@ -80,8 +81,12 @@ NetworkTables.addKeyListener('/SmartDashboard/Auto mode/selected', (key, value) 
 });
 
 // Load list of prewritten autonomous modes
-NetworkTables.addKeyListener('/SmartDashboard/autonomous/selected', (key, value) => {
+NetworkTables.addKeyListener('/SmartDashboard/autonomous/selected', (key, value) => { // /SmartDashboard/autonomous/selected
     ui.autoSelect.value = value;
+});
+
+NetworkTables.addKeyListener('/PowerDistributionPanel[0]/Voltage', (key,value) => { //attempting to add graph as KeyListener
+    NetworkTables.putValue('/PowerDistributionPanel[0]/Voltage', )
 });
 
 // The rest of the doc is listeners for UI elements being clicked on
